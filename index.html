@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Calculator</title>
-</head>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <p class="intro__text">Welcome to my first simply pet project: calculator! Enjoy :)</p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+          <desc>Created with Fabric.js 1.7.22</desc>
+          <defs>
+          </defs>
+          <g transform="translate(128 128) scale(0.72 0.72)">
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)" >
+            <path d="M 24.347 90 c -0.525 0 -1.041 -0.207 -1.424 -0.596 L 0.576 66.748 c -0.768 -0.778 -0.768 -2.03 0 -2.809 l 22.346 -22.655 c 0.569 -0.578 1.431 -0.755 2.183 -0.446 c 0.751 0.308 1.241 1.039 1.241 1.851 v 20.623 C 59.419 62.257 86 35.158 86 2 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 c 0 36.031 -29.452 65.344 -65.654 65.344 c -1.104 0 -2 -0.896 -2 -2 V 47.564 L 4.809 65.344 l 17.537 17.78 v -7.316 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 V 88 c 0 0.812 -0.49 1.542 -1.241 1.851 C 24.859 89.951 24.602 90 24.347 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          </g>
+          </g>
+          </svg>
+      </div>
+      <div class="calculator">
+        <input class="display" maxlength="8" value="0" readonly></input>
+        <div class="calc-grid">
+          <button id="ac" class="calc-grid__item" onclick='ac()' type="button">AC</button>
+          <button id="pm" class="calc-grid__item calc-grid__pm" onclick="calc('pm')" type="button"></button>
+          <button id="percent" class="calc-grid__item calc-grid__percent" onclick="calc('%')" type="button">%</button>
+          <button id="divide" class="calc-grid__item calc-grid__divide" onclick="calc('/')" type="button"></button>
+          <button id="b7" class="calc-grid__item" onclick="calc(7)" type="button">7</button>
+          <button id="b8" class="calc-grid__item" onclick="calc(8)" type="button">8</button>
+          <button id="b9" class="calc-grid__item" onclick="calc(9)" type="button">9</button>
+          <button id="x" class="calc-grid__item calc-grid__x" onclick="calc('*')" type="button">X</button>
+          <button id="b4" class="calc-grid__item" onclick="calc(4)" type="button">4</button>
+          <button id="b5" class="calc-grid__item" onclick="calc(5)" type="button">5</button>
+          <button id="b6" class="calc-grid__item" onclick="calc(6)" type="button">6</button>
+          <button id="minus" class="calc-grid__item calc-grid__minus" onclick="calc('-')" type="button">—</button>
+          <button id="b1" class="calc-grid__item" onclick="calc(1)" type="button">1</button>
+          <button id="b2" class="calc-grid__item" onclick="calc(2)" type="button">2</button>
+          <button id="b3" class="calc-grid__item" onclick="calc(3)" type="button">3</button>
+          <button id="plus" class="calc-grid__item calc-grid__plus" onclick="calc('+')" type="button">+</button>
+          <button id="b0" class="calc-grid__item calc-grid__zero" onclick="calc(0)" type="button">0</button>
+          <button id="point" class="calc-grid__item" onclick="addPoint()" type="button">,</button>
+          <button id="equals" class="calc-grid__item calc-grid__equals" onclick="result()" type="button">=</button>
+        </div>
+      </div>
+      <div class="text">
+        <p class="madeby">made by Dmytro Beliavskyi</p>
+        <p class="github">github.com/troyqa</p>
+      </div>
+      <script src="index.js"></script>
+    </div>
+  </body>
 </html>
